@@ -1,21 +1,193 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'Aldo';
+    src: url("../fontes/AldotheApache.ttf") format('opentype');
+}
 
+@font-face {
+    font-family: 'Koulen';
+    src: url("../fontes/Koulen-Regular.ttf") format('opentype');
+}
 
-/* Paleta de Cores */
+@keyframes pulsate {
+    0%{
+        box-shadow: 
+        0 0 25px var(--cor7),
+        0 0 25px black;
+    }
+}
 
+/* Paleta de Cores
 
+1- #001802
+2- #066313
+3- #010101
+4- #6E6E6E
 
+*/
+
+:root{
+    --cor1: #001802;
+    --cor2: #066313;
+    --cor3: #010101;
+    --cor4: #6E6E6E;
+
+    --cor5: #225A00;
+    --cor6: #38B302;
+    --cor7: #1E5F05;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Aldo', 'cursive';
+    --fonte-menu: 'Koulen', 'cursive';
+}
+
+*{
+    margin: 0;
+    padding: 0px;
+}
 body{
-    background: url("imagens/background.jpg");
-    display: block;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+    background-color: #37b3026c;
 }
 
 header{
-    background-color: aqua;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    border-radius: 10px;
+}
+header > h1{
+    min-height: 130px;
+    font-family: var(--fonte-destaque);
+    font-size: 5em;
 }
 
+header > h2{
+    font-family: var(--fonte-menu);
+}
+
+nav{
+    border-radius: 5px;
+    width: 700px;
+    margin:auto;
+    border: 10px solid #37b3026c;
+    background-color: var(--cor6);
+    padding: 10px;
+    text-align: center;
+    word-spacing: 30px;
+    font-weight: bold;
+}
+
+nav > a{
+    font-family: var(--fonte-menu);
+    border-radius: 5px;
+    margin: 1px;  
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+nav >a:hover{
+    color: var(--cor2);
+}
+
+main{
+    width: 700px;
+    height: auto;
+    background-color: white;
+    margin: auto;
+    font-family: var(--fonte-padrao);
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.37);
+    padding: 20px;
+    min-height: 100vh;
+    margin-bottom: 10px;
+}
+
+main >h1{
+    font-family: var(--fonte-menu);
+}
+
+span.destaquegame{
+    color: var(--cor6);
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;  
+}
+
+
+footer{
+    font-family: var(--fonte-destaque);
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0%;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .container {
+      border: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }

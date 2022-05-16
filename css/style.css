@@ -1,2 +1,21 @@
-@charset "UTF-8"
+@charset "UTF-8";
+
+
+
+/* Paleta de Cores */
+
+
+
+body{
+    background: url("imagens/background.jpg");
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+header{
+    background-color: aqua;
+}
 
